@@ -1,1 +1,27 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root{
+  /* шрифтовые */
+  --main-font-family: 'Inter', Arial, sans-serif;
+  --accent-font-family: 'PressStart2P', Arial, sans-serif;
+  --card-font-weight: 400;
+  --card-title-font-weight: 700;
+
+  /* цветовые темы */
+  --text-color: #000;
+  --background-color: #fff;
+  --text-shadow-color: #fff;
+  --button_transform-bc: #000;
+  --button_transform-color: #fff;
+  --color__heart-contour: #000;
+  --color__heart-sparks: #FF0000;
+
+  /* градиент */
+  --gradient: repeating-linear-gradient(to right, #d3d3d3, transparent 4px),
+    repeating-linear-gradient(#d3d3d3, transparent 4px),
+    linear-gradient(#E7E7E7 0%, #E7E7E7 0.01%, #1A1A1A 100%);
+
+  --header__logo-font-size: clamp(3.06rem, 2.346rem + 1.905vw, 4.06rem);
+  --header__title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+
+  --gap__card-list: 50px;
+}

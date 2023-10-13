@@ -12,3 +12,132 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.button_transform {  /*кнопка с наплывом*/
+  position: relative;
+  overflow: hidden; /*скрыть*/
+}
+
+.button_transform::after {
+  content: "";
+  position: absolute;
+  background-color: var(--button_transform-bc);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);  /*прячем*/
+  inline-size: 100%; /*соответствуем размеру кнопки*/
+  block-size: 100%;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+.button_transform:hover::after {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+.button_transform:hover .button__text,
+.button_transform:hover .dialog__icon {
+  position: relative;
+  z-index: 1;
+  color: var(--button_transform-color);
+  transition: color 1s ease;
+  mix-blend-mode: difference;
+}
+
+@keyframes place { /*анимация треугольничка*/
+  0% {
+    inset-inline-start: -17px;
+  }
+  to {
+    inset-inline-start: -21px;
+  }
+}
+
+@keyframes opacity { /*анимация прозрачности*/
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+/*сердце*/
+
+.sparks {
+  opacity: 0;
+}
+/*hover*/
+.like-icon:hover .core {
+  fill: #fff;
+  transition: fill 0.3s linear;
+}
+
+.like-icon .core {
+  fill: none;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color__heart-contour);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon .main-body {
+  fill: none;
+  transition: fill 0.3s linear;
+}
+/*active*/
+.like-icon:active .core {
+  fill: #fff;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--color__heart-sparks);
+  transition: fill 0.3s 0.05s linear;
+}
+
+/*Клик по иконке*/
+
+.like-icon.is-liked .core {
+  fill: #fff;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color__heart-sparks);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color__heart-sparks);
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: resize 0.3s 0.1s ease-in alternate;
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 0.3s ease-in alternate;
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
