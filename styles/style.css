@@ -237,7 +237,6 @@
   object-fit: cover;
   inline-size: 100%;
   block-size: clamp(23.4375rem, 8.679rem + 38.69vw, 43.75rem);
-  object-fit: cover;
 }
 
 .card__menu-button {
@@ -379,27 +378,20 @@
 /*для телефонов*/
 
 @media (width <=375px) {
-  :root{
+  :root {
     --margin__button-save__block-end: 100px;
     --dialog__icon-size: 28px;
   }
-  
+
   .card__content {
     margin-inline-end: 28px;
     word-spacing: 3px;
   }
 
   .button_save {
-    display: grid;
-    grid-template-columns: 1;
-    block-size: 80px;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .button_save {
     display: flex;
     flex-direction: column;
+    block-size: 80px;
   }
 
   .dialog {
