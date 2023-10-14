@@ -270,10 +270,6 @@
   transition: 0.3s ease;
 }
 
-.footer{
-  font-size: 16px;
-}
-
 .button_save {
   display: flex;
   align-items: center;
@@ -284,7 +280,7 @@
   inline-size: clamp(19.125rem, 17.83rem + 3.452vw, 20.938rem);
   block-size: 51px;
   justify-content: center;
-
+  font-size: 14px;
 }
 
 .dialog__icon {
