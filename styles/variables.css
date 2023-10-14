@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   /* шрифтовые */
-  --main-font-family: 'Inter', Arial, sans-serif;
+  --main-font-family: 'Inter', sans-serif;
   --accent-font-family: 'PressStart2P', Arial, sans-serif;
   --card-font-weight: 400;
   --card-title-font-weight: 700;
@@ -24,4 +24,10 @@
   --header__title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 
   --gap__card-list: 50px;
+
+   /* размеры */
+  --constructor__inline-size: clamp(23.4375rem, 8.679rem + 38.69vw, 43.75rem);
+  --card-content-inline-size: clamp(19.816rem, 5.13rem + 39.161vw, 40.375rem);
+  --dialog__icon-size: 21px;
+  --margin__button-save__block-end: 103px;
 }
