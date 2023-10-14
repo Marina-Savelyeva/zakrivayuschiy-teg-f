@@ -67,7 +67,9 @@
 .sparks {
   opacity: 0;
 }
+
 /*hover*/
+
 .like-icon:hover .core {
   fill: #fff;
   transition: fill 0.3s linear;
@@ -87,7 +89,9 @@
   fill: none;
   transition: fill 0.3s linear;
 }
+
 /*active*/
+
 .like-icon:active .core {
   fill: #fff;
   transition: fill 0.3s linear;

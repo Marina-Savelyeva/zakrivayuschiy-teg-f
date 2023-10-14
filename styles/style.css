@@ -37,6 +37,7 @@
 }
 
 /* хедер начало для большого экрана*/
+
 .header {
   display: flex;
   flex-direction: column;
@@ -127,18 +128,18 @@
   content: "";
   position: absolute;
   background-color: var(--text-color);
-  transition: 0.3s ease;
+  transition: scale 0.3s ease;
   transform-origin: center left;
   inline-size: 100%;
   block-size: 1px;
   scale: 0;
-  inset-block-end: -2px;
+  inset-block-end: 0;
   inset-inline-start: 0;
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus-visible::after {
-  opacity: 0.6;
-  transition: 0.3s ease;
+  transition: scale 0.3s ease;
   scale: 1;
 }
 
@@ -168,11 +169,9 @@
   display: flex;
   flex-direction: column;
   row-gap: 27px;
-  /*padding: 25px 25px 0 25px;*/
   margin-block-start: 25px;
-  margin-inline-start: 24px;
-  margin-inline-end: 24px;
-
+  margin-inline-start: 25px;
+  margin-inline-end: 25px;
   color: var(--text-color);
   font-family: var(--main-font-family);
   font-variation-settings: "wght" var(--card-font-weight);
@@ -181,7 +180,6 @@
   line-height: 21px;
   letter-spacing: 0;
   inline-size: var(--card-content-inline-size);
-
   word-spacing: 4px;
 }
 
@@ -219,7 +217,7 @@
   mix-blend-mode: hard-light; /*из фигмы*/
 }
 
-@supports (
+@supports ( /*проверка на поддержку (тень от текста - обводка текста*/
   (text-stroke: 1px var(--text-shadow-color)) or
     (-webkit-text-stroke: 1px var(--text-shadow-color))) {
   .card__watermark {
@@ -265,18 +263,18 @@
 
 .card__icon-button:focus {
   outline: none;
-  border: 2px solid var(--text-color);
-  transition: 0.3s ease;
 }
 
-.button__text:focus {
+.card__icon-button:focus-visible {
   outline: none;
+  border: 2px solid var(--text-color);
+  transition: border 0.3s ease;
 }
 
-.button:focus-visible {
+.button_transform:focus-visible {
   box-shadow: 2px 2px 0 0 var(--text-color);
   outline: none;
-  transition: 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .button_save {
@@ -335,7 +333,7 @@
 }
 
 .dialog__button {
-  outline: 2px solid var(--text-color);
+  border: 2px solid var(--text-color);
   block-size: 38px;
   inline-size: 100%;
 }
@@ -378,7 +376,14 @@
   filter: saturate(150%) grayscale(0.2);
 }
 
+/*для телефонов*/
+
 @media (width <=375px) {
+  :root{
+    --margin__button-save__block-end: 100px;
+    --dialog__icon-size: 28px;
+  }
+  
   .card__content {
     margin-inline-end: 28px;
     word-spacing: 3px;
@@ -395,11 +400,6 @@
   .button_save {
     display: flex;
     flex-direction: column;
-  }
-
-  :root{
-    --margin__button-save__block-end: 100px;
-    --dialog__icon-size: 28px;
   }
 
   .dialog {
