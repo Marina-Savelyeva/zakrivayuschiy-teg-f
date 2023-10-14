@@ -180,7 +180,7 @@
   line-height: 21px;
   letter-spacing: 0;
   inline-size: var(--card-content-inline-size);
-  word-spacing: 4px;
+  /*word-spacing: 4px;*/
 }
 
 .button {
