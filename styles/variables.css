@@ -2,7 +2,7 @@
 :root {
   /* шрифтовые */
   --main-font-family: 'Inter', sans-serif;
-  --accent-font-family: 'PressStart2P', Arial, sans-serif;
+  --accent-font-family: 'PressStart2P', "fantasy", sans-serif;
   --card-font-weight: 400;
   --card-title-font-weight: 700;
 
@@ -12,12 +12,10 @@
   --text-shadow-color: #fff;
   --button_transform-bc: #000;
   --button_transform-color: #fff;
-  --color__heart-contour: #000;
-  --color__heart-sparks: #FF0000;
 
   /* градиент */
-  --gradient: repeating-linear-gradient(to right, #d3d3d3, transparent 4px),
-    repeating-linear-gradient(#d3d3d3, transparent 4px),
+  --gradient: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#E7E7E7 0%, #E7E7E7 0.01%, #1A1A1A 100%);
 
   --header__logo-font-size: clamp(3.06rem, 2.346rem + 1.905vw, 4.06rem);
@@ -30,4 +28,17 @@
   --card-content-inline-size: clamp(19.816rem, 5.13rem + 39.161vw, 40.375rem);
   --dialog__icon-size: 21px;
   --margin__button-save__block-end: 103px;
+
+  /*цвета для сердечка*/
+  --fill-core: #fff;
+  --color__heart-contour: #000;
+  --color__heart-sparks: #FF0000;
+  --fill-active-core: #ff0000;
+}
+
+@media (width <=375px) {
+  :root {
+    --margin__button-save__block-end: 100px;
+    --dialog__icon-size: 28px;
+  }
 }
