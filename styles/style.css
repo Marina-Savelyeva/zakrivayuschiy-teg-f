@@ -93,8 +93,7 @@
   text-transform: uppercase;
   background-color: transparent;
   cursor: pointer;
-  opacity: 1;
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.3s ease;
   appearance: none;
 }
 
@@ -238,7 +237,6 @@
   object-fit: cover;
   inline-size: 100%;
   block-size: clamp(23.4375rem, 8.679rem + 38.69vw, 43.75rem);
-  object-fit: cover;
   object-position: center;
 }
 
@@ -289,7 +287,7 @@
   mix-blend-mode: difference;
 }
 
-.like-icon{
+.like-icon {
   width: 39px;
   height: 36px;
 }

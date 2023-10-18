@@ -79,7 +79,7 @@
   transition: fill 0.3s 0.06s linear;
 }
 
-.like-icon .contour{
+.like-icon .contour {
   fill: var(--color__heart-contour);
   transition: fill 0.1s linear;
 }
