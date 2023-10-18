@@ -2,7 +2,7 @@
 :root {
   /* шрифтовые */
   --main-font-family: 'Inter', sans-serif;
-  --accent-font-family: 'PressStart2P', "fantasy", sans-serif;
+  --accent-font-family: 'PressStart2P', fantasy;
   --card-font-weight: 400;
   --card-title-font-weight: 700;
 
